@@ -14,7 +14,7 @@
 ```javascript
 pip install segmentation_models
 ```
-### Data Preparation
+### Data preparation
 The .tif image format data is used for this project.
 
 code to generate ndarray data for training on RGB and multispectral images.
