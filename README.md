@@ -15,7 +15,7 @@
 pip install segmentation_models
 ```
 ### Data preparation
-The .tif image format data is used for this project.
+The images and labels are in .tif format, and GDAL library is used for geospatial image data processing.
 
 code to generate ndarray data for training on RGB and multispectral images.
 
