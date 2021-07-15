@@ -94,7 +94,7 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
                             save_best_only=True)
 ```
 Trained the implemented model with batch size 8.
-### Results and predicted visualizations
+
 Model is trained for 60 epochs on both RGB and Multispectral data with pretrained weights on imagenet dataset.
 |Image Data|Trained no. of Epochs|Train IoU score|Validation Iou score|
 |:--------:|:-------------------:|:-------------:|:------------------:|
