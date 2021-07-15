@@ -1,4 +1,4 @@
-# Geospatial Semantic Segmentation
+# Geospatial Multiclass Semantic Segmentation
   Implementation of Unet semantic segmentation with pretrained ResNet backbone on geospatial multispectral image data.
 ## Getting started
 ### Prerequisites
