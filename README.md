@@ -112,3 +112,4 @@ y_pred_argmax = np.argmax(y_pred, axis=3)
 prediction = y_pred_argmax.reshape((64,64))
 ground_truth = y_inference[index].reshape((64,64))
 ```
+Predictions on random RGB inference images.
