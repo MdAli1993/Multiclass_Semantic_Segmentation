@@ -112,4 +112,17 @@ y_pred_argmax = np.argmax(y_pred, axis=3)
 prediction = y_pred_argmax.reshape((64,64))
 ground_truth = y_inference[index].reshape((64,64))
 ```
-Predictions on random RGB inference images.
+- Predictions on random RGB inference images.
+
+prediction: predicted model output.
+
+Ground truth: label in same pixel values for classes (for better visual comparison).
+
+Label: original label image.
+![Capture](https://user-images.githubusercontent.com/58230700/125792388-664c6d2c-1719-42f3-a09f-3ae886b9a73c.PNG)
+![RGB](https://user-images.githubusercontent.com/58230700/125793374-ab753eee-04b7-4d92-919e-a65ad5264eb1.PNG)
+![zbbPNG](https://user-images.githubusercontent.com/58230700/125793758-982cc699-61f4-4367-9a66-13eef9e575ce.PNG)
+- Predictions on random multispectral inference images.
+![uhwuif](https://user-images.githubusercontent.com/58230700/125794513-3bf6e6cd-23de-4b1e-9c2b-6986c4b0b326.PNG)
+![chdsuifh](https://user-images.githubusercontent.com/58230700/125794543-0259cc39-8a14-4925-9911-8a7e08c1cf62.PNG)
+![bshdf](https://user-images.githubusercontent.com/58230700/125794602-0682a2b0-c097-463e-a0db-3bf22123761b.PNG)
