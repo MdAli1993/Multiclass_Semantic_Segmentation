@@ -57,6 +57,12 @@ train_images = np.array(train_images)
 ```
 Repeat the iteration to generate label list of arrays.
 
+Data splitted into training, testiong, and inference randomly with the approximate ratio of (0.85, 0.1, 0.05) respectively by using sklearn's train_test_split library.
+```javascript
+from sklearn.model_selection import train_test_split
+X1, X_test, y1, y_test = train_test_split(train_images, train_masks_input, test_size = 0.10, random_state = 0)
+X_train, X_inference, y_train, y_inference = train_test_split(X1, y1, test_size = 0.05, random_state = 0)
+```
 Encode the label masks into numerical class vectors, and then convert them into binary matrices.
 ### Training
 Change the shape of input layer in the base model to adapt the N channel
@@ -88,6 +94,12 @@ model_checkpoint_callback = tf.keras.callbacks.ModelCheckpoint(
                             save_best_only=True)
 ```
 Trained the implemented model with batch size 8.
+### Results and predicted visualizations
+Model is trained for 60 epochs on both RGB and Multispectral data with pretrained weights on imagenet dataset.
+|Image Data|Trained no. of Epochs|Train IoU score|Validation Iou score|
+|:--------:|:-------------------:|:-------------:|:------------------:|
+|Multispectral|60|0.72|0.69|
+|RGB|60|3|4|
 ### Predictions
 predict the trained model on inference images.
 ```javascript
@@ -100,4 +112,3 @@ y_pred_argmax = np.argmax(y_pred, axis=3)
 prediction = y_pred_argmax.reshape((64,64))
 ground_truth = y_inference[index].reshape((64,64))
 ```
-### Result visualization
