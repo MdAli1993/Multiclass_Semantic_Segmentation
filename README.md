@@ -99,7 +99,7 @@ Model is trained for 60 epochs on both RGB and Multispectral data with pretraine
 |Image Data|Trained no. of Epochs|Train IoU score|Validation Iou score|
 |:--------:|:-------------------:|:-------------:|:------------------:|
 |Multispectral|60|0.72|0.69|
-|RGB|60|3|4|
+|RGB|60|0.63|0.62|
 ### Predictions
 predict the trained model on inference images.
 ```javascript
